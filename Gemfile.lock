@@ -1,3 +1,9 @@
+PATH
+  remote: ~/Dev/setlist_parser
+  specs:
+    setlist_parser (0.1.0)
+      activerecord (>= 4.2, < 6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -266,6 +272,7 @@ DEPENDENCIES
   raindrops (~> 0.13.0)
   reek
   rubocop
+  setlist_parser!
   simple_mercator_location
   spring
   sqlite3

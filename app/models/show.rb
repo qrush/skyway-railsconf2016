@@ -24,7 +24,7 @@ class Show < ActiveRecord::Base
   attr_writer :raw_setlist
 
   def self.parse(params)
-    Parser.parse(params).tap(&:save)
+    SetlistParser.parse(params).tap(&:save)
   end
 
   def replace(show)
