@@ -24,12 +24,12 @@
   </p>
 </section>
 
-<section class="right" id="listen">
-  <h2>Listen</h2>
-  <iframe class="bandcamp" src="https://bandcamp.com/EmbeddedPlayer/album=1616911330/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="http://aqueous1.bandcamp.com/album/sonic-farm-presents-aqueous-live-in-boulder-2015-11-21">Sonic Farm Presents: Aqueous Live in Boulder 2015-11-21 by Aqueous</a></iframe>
 
+<section class="right" id="watch">
+  <h2>Watch</h2>
+  <iframe id="youtube" width="100%" src="<%= @announcement.embed_url %>" frameborder="0" allowfullscreen></iframe>
   <p class="more">
-    <%= link_to "More music &rarr;".html_safe, page_path("music") %>
+    <%= link_to "More videos &rarr;".html_safe, "http://youtube.com/AqueousBand" %>
   </p>
 </section>
 
@@ -48,10 +48,12 @@
   </p>
 </section>
 
-<section class="right" id="watch">
-  <h2>Watch</h2>
-  <iframe id="youtube" width="100%" src="<%= @announcement.embed_url %>" frameborder="0" allowfullscreen></iframe>
+<section class="right" id="listen">
+  <h2>Listen</h2>
+  <iframe class="bandcamp" src="https://bandcamp.com/EmbeddedPlayer/album=1616911330/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="http://aqueous1.bandcamp.com/album/sonic-farm-presents-aqueous-live-in-boulder-2015-11-21">Sonic Farm Presents: Aqueous Live in Boulder 2015-11-21 by Aqueous</a></iframe>
+
   <p class="more">
-    <%= link_to "More videos &rarr;".html_safe, "http://youtube.com/AqueousBand" %>
+    <%= link_to "More music &rarr;".html_safe, page_path("music") %>
   </p>
 </section>
+
