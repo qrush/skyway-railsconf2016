@@ -13,9 +13,22 @@ class Setlist < ActiveRecord::Base
 
   def to_s(options = {})
     if options[:without_notes]
-      "#{name}: #{slots.map { |slot| slot.to_s(options) }.join(' ')}"
+      setlist_without_notes
     else
-      [name, *slots.map { |slot| slot.to_s(options) }].join("\n")
+      setlist_with_notes
     end
   end
+
+  private
+    def setlist_without_notes
+      "#{name}: #{song_names(without_notes: true).join(' ')}"
+    end
+
+    def setlist_with_notes
+      [name, *song_names].join("\n")
+    end
+
+    def song_names(options = {})
+      slots.map { |slot| slot.to_s(options) }
+    end
 end
