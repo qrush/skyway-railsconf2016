@@ -1,11 +1,11 @@
 class Article < ActiveRecord::Base
-  validates_presence_of :title, :body, :published_at
+  validates :title, :body, :published_at, presence: true
 
   scope :undrafted, -> { where(draft: false) }
   scope :published, -> { order(published_at: :desc) }
 
   def summary
-    to_html.scan(/<p>(.*)<\/p>/).flatten.first
+    to_html.scan(%r{<p>(.*)</p>}).flatten.first
   end
 
   def to_html
@@ -13,6 +13,6 @@ class Article < ActiveRecord::Base
   end
 
   def to_param
-    "#{id}-#{title.downcase.gsub(" ", "-")}"
+    "#{id}-#{title.downcase.tr(' ', '-')}"
   end
 end
