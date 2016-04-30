@@ -2,11 +2,11 @@ class AnnouncementsController < ApplicationController
   before_filter :require_admin
 
   def new
-    @announcement = Announcement.new(body: Announcement.last.try(:body))
+    @announcement = TourBus::Announcement.new(body: TourBus::Announcement.last.try(:body))
   end
 
   def create
-    @announcement = Announcement.new(announcement_params)
+    @announcement = TourBus::Announcement.new(announcement_params)
 
     if @announcement.save
       redirect_to root_path

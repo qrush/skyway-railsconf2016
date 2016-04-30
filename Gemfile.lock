@@ -1,3 +1,9 @@
+PATH
+  remote: ../tour_bus
+  specs:
+    tour_bus (0.0.1)
+      rails (> 4.2, < 6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -262,6 +268,7 @@ DEPENDENCIES
   rubocop
   simple_mercator_location
   spring
+  tour_bus!
   turbolinks
   uglifier
   unicorn

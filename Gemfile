@@ -26,6 +26,8 @@ gem 'kramdown'
 gem 'simple_mercator_location'
 gem 'geocoder'
 
+gem 'tour_bus', path: '../tour_bus'
+
 group :production do
   # Bumping some unicorn deps so the app builds on 2.2.0
   gem 'unicorn'
