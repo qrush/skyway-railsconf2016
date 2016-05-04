@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 4.1'
 gem 'spring', group: 'development'
-gem 'pg'
+gem 'sqlite3'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
