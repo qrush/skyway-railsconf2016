@@ -2,6 +2,8 @@ class Slot < ActiveRecord::Base
   belongs_to :setlist
   belongs_to :song, touch: true
 
+  serialize :notes, Array
+
   def cache_key
     "#{super}-#{song.cache_key}"
   end
