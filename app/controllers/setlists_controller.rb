@@ -23,6 +23,6 @@ class SetlistsController < ApplicationController
     end
 
     def find_show_by_performed_at
-      Show.performed.find_by_performed_at!(DateTime.parse(params[:show_id]))
+      Show.performed.find_by_performed_at!(Date.parse(params[:show_id]))
     end
 end
