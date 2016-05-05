@@ -24,7 +24,15 @@ cd skyway
 bin/setup -v
 ```
 
-And make sure to link your app with Pow! Assuming you installed it in `~/Dev`:
+Then you can run:
+
+```shell
+bin/rails server
+```
+
+And then open up http://localhost:3000 
+
+If you're using Pow, assuming you installed it in `~/Dev`:
 
 ``` shell
 cd ~/.pow
