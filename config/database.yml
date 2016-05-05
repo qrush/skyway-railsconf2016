@@ -1,17 +1,17 @@
 development:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
-  database: skyway_development
+  database: tmp/skyway_development.sqlite
   pool: 5
 
 test:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
-  database: skyway_test
+  database: tmp/skyway_test.sqlite
   pool: 5
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: skyway_development
+  database: skyway_production
   pool: 5

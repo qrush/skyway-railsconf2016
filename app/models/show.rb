@@ -20,6 +20,7 @@ class Show < ActiveRecord::Base
   scope :performed,    -> { ordered.includes(:venue, setlists: {slots: :song}) }
   scope :for_year,     -> (year) { before_today.where("EXTRACT(YEAR FROM performed_at) = ?", year) }
 
+  serialize :notes, Array
   attr_writer :raw_setlist
 
   def self.parse(params)

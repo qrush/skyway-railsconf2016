@@ -57,6 +57,6 @@ class ShowsController < ApplicationController
     end
 
     def find_show_by_performed_at
-      Show.performed.find_by_performed_at!(DateTime.parse(params[:id]))
+      Show.performed.find_by_performed_at!(Date.parse(params[:id]))
     end
 end
