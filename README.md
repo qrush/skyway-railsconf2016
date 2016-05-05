@@ -31,6 +31,15 @@ cd ~/.pow
 ln -s ~/Dev/skyway
 ```
 
+## Admin
+
+Go to: http://skyway.dev/admin
+
+Username: admin
+Password: deadbeef
+
+Then scroll down!
+
 ## License
 
 MIT. See `LICENSE`.
